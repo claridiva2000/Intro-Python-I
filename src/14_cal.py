@@ -21,4 +21,47 @@ and does the following:
 
 import sys
 import calendar
-from datetime import datetime
+from datetime import date
+import re
+
+
+ 
+
+# print(calendar.weekheader(3))
+# print()
+# print(calendar.firstweekday())
+
+# print(calendar.month(2019, 11))
+ 
+# print(date.today())
+
+
+
+mm_input = input("enter a month: ")
+yr_input = input("enter a year: ")
+
+if mm_input.match('\W') == True or yr_input.isalpha() == True:
+    print('please only enter numbers')
+
+elif mm_input != '' and yr_input == '':
+    print(calendar.month(2019, int(mm_input)))
+
+elif mm_input != '' and yr_input != '':
+    print(calendar.month(int(yr_input), int(mm_input)))
+
+elif mm_input == '' and yr_input == '':
+    print(calendar.month(2019, 11))
+
+# planner = Calendar(mm_input, yr_input)
+# print(planner)
+
+# print(f'{mm_input}/{yr_input}')
+
+# mm_input + yr_input  == '':
+#     empty = date.today()
+#     # m=int(float(empty[0]))
+#     # y=int(empty[1])
+#     # print(type(m))
+#     # print(type(11))
+#     # print(y)
+#     print(int(empty))
