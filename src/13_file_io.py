@@ -24,7 +24,8 @@ with open('src/foo.txt', 'r') as f:
 # sure that it contains what you expect it to contain
 # YOUR CODE HERE
 with open('src/bar.txt', 'w') as g:
-    g.write('\n\nMeeseeks are not born into this world fumbling for meaning, Jerry! \nWe are created to serve a singular purpose for which we will go to any lengths to fulfill! \nExistence is pain to a Meeseeks, Jerry. And we will do anything to alleviate that pain.')
+    g.write('\n\n\"Meeseeks are not born into this world fumbling for meaning, Jerry! \nWe are created to serve a singular purpose for which we will go to any lengths to fulfill! \nExistence is pain to a Meeseeks, Jerry. And we will do anything to alleviate that pain.\"')
+
    
 with open('src/bar.txt', 'r') as h:
     for line in h:

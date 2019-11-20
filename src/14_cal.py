@@ -35,15 +35,20 @@ import re
 # print(calendar.month(2019, 11))
  
 # print(date.today())
-
+arguments = sys.argv
+arg_len = len(arguments)
 
 
 mm_input = input("enter a month: ")
 yr_input = input("enter a year: ")
 
 
+if mm_input != '' or mm_input != int or yr_input != '' or yr_input != int:
+    print('must enter a number')
+    mm_input = input("enter a month: ")
+    yr_input = input("enter a year: ")
 
-if mm_input != '' and yr_input == '':
+elif mm_input != '' and yr_input == '':
     print(calendar.month(2019, int(mm_input)))
 
 elif mm_input != '' and yr_input != '':
