@@ -21,6 +21,7 @@ and does the following:
 
 import sys
 import calendar
+from datetime import datetime
 from datetime import date
 import re
 
@@ -40,17 +41,19 @@ import re
 mm_input = input("enter a month: ")
 yr_input = input("enter a year: ")
 
-if mm_input.match('\W') == True or yr_input.isalpha() == True:
-    print('please only enter numbers')
 
-elif mm_input != '' and yr_input == '':
+
+if mm_input != '' and yr_input == '':
     print(calendar.month(2019, int(mm_input)))
 
 elif mm_input != '' and yr_input != '':
     print(calendar.month(int(yr_input), int(mm_input)))
 
-elif mm_input == '' and yr_input == '':
-    print(calendar.month(2019, 11))
+else: 
+    print(calendar.month(datetime.now().year, datetime.now().month))
+    print("please enter a number")
+
+    
 
 # planner = Calendar(mm_input, yr_input)
 # print(planner)
