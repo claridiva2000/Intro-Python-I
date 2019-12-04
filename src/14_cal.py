@@ -22,3 +22,54 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+from datetime import date
+import re
+
+
+ 
+
+# print(calendar.weekheader(3))
+# print()
+# print(calendar.firstweekday())
+
+# print(calendar.month(2019, 11))
+ 
+# print(date.today())
+arguments = sys.argv
+arg_len = len(arguments)
+
+
+mm_input = input("enter a month: ")
+yr_input = input("enter a year: ")
+
+
+if mm_input != '' or mm_input != int or yr_input != '' or yr_input != int:
+    print('must enter a number')
+    mm_input = input("enter a month: ")
+    yr_input = input("enter a year: ")
+
+elif mm_input != '' and yr_input == '':
+    print(calendar.month(2019, int(mm_input)))
+
+elif mm_input != '' and yr_input != '':
+    print(calendar.month(int(yr_input), int(mm_input)))
+
+else: 
+    print(calendar.month(datetime.now().year, datetime.now().month))
+    print("please enter a number")
+
+    
+
+# planner = Calendar(mm_input, yr_input)
+# print(planner)
+
+# print(f'{mm_input}/{yr_input}')
+
+# mm_input + yr_input  == '':
+#     empty = date.today()
+#     # m=int(float(empty[0]))
+#     # y=int(empty[1])
+#     # print(type(m))
+#     # print(type(11))
+#     # print(y)
+#     print(int(empty))
